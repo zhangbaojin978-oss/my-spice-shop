@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一勺食话 | 一勺调味，好好吃饭</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #FF6B6B 0%, #FFD93D 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .product-image {
+            transition: transform 0.5s ease;
+        }
+        .card-hover:hover .product-image {
+            transform: scale(1.05);
+        }
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .pulse-badge {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+    </style>
+</head>
+<body class="bg-amber-50 min-h-screen">
+
+    <!-- 顶部导航 -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <span class="text-2xl">🥄</span>
+                <span class="text-xl font-bold text-gray-800">一勺食话</span>
+            </div>
+            <button class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-full text-sm font-medium transition">
+                🛒 购物车 (0)
+            </button>
+        </div>
+    </nav>
+
+    <!-- 顶部 Banner -->
+    <header class="gradient-bg pt-20 pb-16 px-4">
+        <div class="max-w-4xl mx-auto text-center text-white">
+            <div class="floating text-6xl mb-4">🍳✨🥗</div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">一勺调味，好好吃饭</h1>
+            <p class="text-lg md:text-xl opacity-90 mb-6">为忙碌的都市人，找回好好吃饭的仪式感</p>
+            <div class="flex flex-wrap justify-center gap-3 mb-8">
+                <span class="bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full text-sm">⏱️ 10分钟出餐</span>
+                <span class="bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full text-sm">🥬 0糖0脂</span>
+                <span class="bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full text-sm">🎯 零失败</span>
+            </div>
+            <a href="#products" class="inline-block bg-white text-amber-600 px-8 py-3 rounded-full font-bold hover:shadow-lg transition transform hover:scale-105">
+                探索美味 ↓
+            </a>
+        </div>
+    </header>
+
+    <!-- 核心产品展示区 -->
+    <section id="products" class="max-w-6xl mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+            <span class="bg-amber-100 text-amber-700 px-4 py-1 rounded-full text-sm font-medium">精选产品</span>
+            <h2 class="text-3xl font-bold text-gray-800 mt-4">核心产品系列</h2>
+            <p class="text-gray-500 mt-2">专为厨房小白与忙碌职场人打造</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <!-- 产品卡片1 -->
+            <div class="card-hover bg-white rounded-3xl overflow-hidden shadow-lg">
+                <div class="relative overflow-hidden h-48 bg-gradient-to-br from-orange-100 to-red-100 flex items-center justify-center">
+                    <div class="product-image text-8xl">🥘</div>
+                    <span class="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold pulse-badge">
+                        🔥 爆款
+                    </span>
+                </div>
+                <div class="p-6">
+                    <div class="text-xs text-amber-600 font-medium mb-1">「十分钟魔法」系列</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">复合焖菜汁</h3>
+                    <p class="text-gray-500 text-sm mb-4">食材+汁=一键焖，10分钟搞定一顿好饭</p>
+                    <div class="flex flex-wrap gap-1 mb-4">
+                        <span class="bg-orange-50 text-orange-600 px-2 py-1 rounded text-xs">照烧风味</span>
+                        <span class="bg-orange-50 text-orange-600 px-2 py-1 rounded text-xs">蒜香蚝油</span>
+                        <span class="bg-orange-50 text-orange-600 px-2 py-1 rounded text-xs">酸辣泰式</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-2xl font-bold text-red-500">¥15.9</span>
+                            <span class="text-gray-400 text-sm line-through ml-2">¥19.9</span>
+                        </div>
+                        <button class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-2 rounded-full text-sm font-bold hover:shadow-lg transition">
+                            立即购买
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 产品卡片2 -->
+            <div class="card-hover bg-white rounded-3xl overflow-hidden shadow-lg">
+                <div class="relative overflow-hidden h-48 bg-gradient-to-br from-green-100 to-teal-100 flex items-center justify-center">
+                    <div class="product-image text-8xl">🥗</div>
+                    <span class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                        🌿 轻食
+                    </span>
+                </div>
+                <div class="p-6">
+                    <div class="text-xs text-green-600 font-medium mb-1">「轻食美学」系列</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">高颜值沙拉无糖油醋汁</h3>
+                    <p class="text-gray-500 text-sm mb-4">0糖0脂，清爽不沉重，一次一瓶不浪费</p>
+                    <div class="flex flex-wrap gap-1 mb-4">
+                        <span class="bg-green-50 text-green-600 px-2 py-1 rounded text-xs">蜂蜜芥末</span>
+                        <span class="bg-green-50 text-green-600 px-2 py-1 rounded text-xs">柠檬黑醋</span>
+                        <span class="bg-green-50 text-green-600 px-2 py-1 rounded text-xs">+2种口味</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-2xl font-bold text-green-500">¥12.9</span>
+                            <span class="text-gray-400 text-sm line-through ml-2">¥15.9</span>
+                        </div>
+                        <button class="bg-gradient-to-r from-green-500 to-teal-500 text-white px-6 py-2 rounded-full text-sm font-bold hover:shadow-lg transition">
+                            立即购买
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 产品卡片3 -->
+            <div class="card-hover bg-white rounded-3xl overflow-hidden shadow-lg">
+                <div class="relative overflow-hidden h-48 bg-gradient-to-br from-yellow-100 to-amber-100 flex items-center justify-center">
+                    <div class="product-image text-8xl">🍗</div>
+                    <span class="absolute top-4 left-4 bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                        🎯 新品
+                    </span>
+                </div>
+                <div class="p-6">
+                    <div class="text-xs text-amber-600 font-medium mb-1">「空气炸锅神仙」系列</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">空气炸锅专用神仙撒料</h3>
+                    <p class="text-gray-500 text-sm mb-4">一撒即成，无需腌制，烤焦也能救回来</p>
+                    <div class="flex flex-wrap gap-1 mb-4">
+                        <span class="bg-amber-50 text-amber-600 px-2 py-1 rounded text-xs">蒜香面包屑</span>
+                        <span class="bg-amber-50 text-amber-600 px-2 py-1 rounded text-xs">孜然烧烤</span>
+                        <span class="bg-amber-50 text-amber-600 px-2 py-1 rounded text-xs">+3种口味</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-2xl font-bold text-amber-500">¥9.9</span>
+                            <span class="text-gray-400 text-sm line-through ml-2">¥12.9</span>
+                        </div>
+                        <button class="bg-gradient-to-r from-amber-500 to-yellow-500 text-white px-6 py-2 rounded-full text-sm font-bold hover:shadow-lg transition">
+                            立即购买
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 组合优惠 -->
+        <div class="mt-12 bg-gradient-to-r from-amber-500 to-orange-500 rounded-3xl p-8 text-white text-center">
+            <h3 class="text-2xl font-bold mb-2">🎁 组合装更划算</h3>
+            <p class="opacity-90 mb-6">焖菜汁×3 + 撒料×5 = 专享价 ¥69.9（省¥29.8）</p>
+            <button class="bg-white text-orange-600 px-8 py-3 rounded-full font-bold hover:shadow-lg transition transform hover:scale-105">
+                查看组合套餐
+            </button>
+        </div>
+    </section>
+
+    <!-- 信任背书 -->
+    <section class="bg-white py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h3 class="text-2xl font-bold text-gray-800 mb-8">为什么选择一勺食话？</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="text-4xl mb-2">👥</div>
+                    <div class="text-2xl font-bold text-gray-800">50K+</div>
+                    <div class="text-gray-500 text-sm">用户信赖</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl mb-2">⭐</div>
+                    <div class="text-2xl font-bold text-gray-800">4.9</div>
+                    <div class="text-gray-500 text-sm">好评率</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl mb-2">🚚</div>
+                    <div class="text-2xl font-bold text-gray-800">次日达</div>
+                    <div class="text-gray-500 text-sm">极速发货</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl mb-2">💯</div>
+                    <div class="text-2xl font-bold text-gray-800">365天</div>
+                    <div class="text-gray-500 text-sm">售后保障</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 用户评价 -->
+    <section class="bg-amber-50 py-16 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-10">
+                <span class="bg-amber-100 text-amber-700 px-4 py-1 rounded-full text-sm font-medium">用户心声</span>
+                <h3 class="text-2xl font-bold text-gray-800 mt-4">大家都在说</h3>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center text-lg">👩</div>
+                        <div>
+                            <div class="font-medium text-gray-800">小美</div>
+                            <div class="text-xs text-gray-400">职场白领</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">"下班太累不想做饭，焖菜汁救了我！真的是10分钟就能吃上热乎饭，味道绝了！"</p>
+                    <div class="text-amber-400 text-sm mt-2">⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-lg">👨</div>
+                        <div>
+                            <div class="font-medium text-gray-800">阿杰</div>
+                            <div class="text-xs text-gray-400">厨房小白</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">"我做饭从来没成功过，直到买了这个撒料。空气炸锅一撒就成，同事都以为我练过！"</p>
+                    <div class="text-amber-400 text-sm mt-2">⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-lg">👩</div>
+                        <div>
+                            <div class="font-medium text-gray-800">瑜伽老师</div>
+                            <div class="text-xs text-gray-400">健身达人</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">"沙拉汁真的0糖0脂，我一直在用减脂餐必备！关键是颜值高，拍照很好看~"</p>
+                    <div class="text-amber-400 text-sm mt-2">⭐⭐⭐⭐⭐</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section class="bg-white py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="text-5xl mb-4">🥄✨</div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">关于一勺食话</h3>
+            <p class="text-gray-600 leading-relaxed max-w-2xl mx-auto mb-8">
+                我们是一群热爱美食的都市人，深知下班后的疲惫与厨房小白的困扰。
+                于是我们创立了「一勺食话」，用精简的产品设计，让每个人都能轻松享受好好吃饭的幸福感。
+                一勺调味，治愈一整天的疲惫。
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <div class="bg-gray-100 px-6 py-3 rounded-xl">
+                    <span class="text-2xl">🎬</span>
+                    <div class="text-sm text-gray-600 mt-1">视频教程</div>
+                </div>
+                <div class="bg-gray-100 px-6 py-3 rounded-xl">
+                    <span class="text-2xl">💬</span>
+                    <div class="text-sm text-gray-600 mt-1">社群支持</div>
+                </div>
+                <div class="bg-gray-100 px-6 py-3 rounded-xl">
+                    <span class="text-2xl">🔄</span>
+                    <div class="text-sm text-gray-600 mt-1">7天无理由</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer class="bg-gray-900 text-white py-12 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl">🥄</span>
+                    <span class="text-xl font-bold">一勺食话</span>
+                </div>
+                <div class="flex gap-6 text-gray-400 text-sm">
+                    <a href="#" class="hover:text-white transition">关于我们</a>
+                    <a href="#" class="hover:text-white transition">联系客服</a>
+                    <a href="#" class="hover:text-white transition">隐私政策</a>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#" class="text-2xl hover:scale-110 transition">📱</a>
+                    <a href="#" class="text-2xl hover:scale-110 transition">📷</a>
+                    <a href="#" class="text-2xl hover:scale-110 transition">💬</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">
+                <p>© 2026 一勺食话 | 一勺调味，好好吃饭</p>
+                <p class="mt-2">让每个人都能轻松享受美食的幸福感</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+  "十三香": {
+    "category": "盒装",
+    "stock": 50,
+    "cost_price": 245.0,
+    "sell_price": 300.0,
+    "production_date": "2026-04-06",
+    "shelf_life_months": 12,
+    "expiry_status": {
+      "status": "safe",
+      "days": 292,
+      "message": "✅ 安全，剩余 292 天"
+    },
+    "created_at": "2026-06-17 08:58:22"
+  },
+  "莲花味精": {
+    "category": "袋装",
+    "stock": 20,
+    "cost_price": 110.0,
+    "sell_price": 125.0,
+    "production_date": "2026-05-12",
+    "shelf_life_months": 18,
+    "expiry_status": {
+      "status": "safe",
+      "days": 512,
+      "message": "✅ 安全，剩余 512 天"
+    },
+    "created_at": "2026-06-17 08:59:26"
+  },
+  "莎麦鸡精": {
+    "category": "箱装",
+    "stock": 100,
+    "cost_price": 322.0,
+    "sell_price": 360.0,
+    "production_date": "2026-05-24",
+    "shelf_life_months": 12,
+    "expiry_status": {
+      "status": "safe",
+      "days": 340,
+      "message": "✅ 安全，剩余 340 天"
+    },
+    "created_at": "2026-06-17 09:00:14"
+  }
+}
