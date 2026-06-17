@@ -40,5 +40,19 @@
       "message": "✅ 安全，剩余 340 天"
     },
     "created_at": "2026-06-17 09:00:14"
+  },
+  "酱香王": {
+    "category": "袋装",
+    "stock": 50,
+    "cost_price": 47.0,
+    "sell_price": 53.0,
+    "production_date": "2026-05-12",
+    "shelf_life_months": 18,
+    "expiry_status": {
+      "status": "safe",
+      "days": 512,
+      "message": "✅ 安全，剩余 512 天"
+    },
+    "created_at": "2026-06-17 14:54:21"
   }
 }
